@@ -6,14 +6,14 @@ export default function Display(props) {
     if(balls === 0 && strikes === 0){
         return(
             <div>
-            Balls 
+             
             <div>
-                {balls}
+            Balls :  {balls}
             </div>
             <br />
-            Strikes 
+            
             <div>
-                {strikes}
+            Strikes :  {strikes}
             </div>
         </div>
         )
@@ -23,14 +23,14 @@ export default function Display(props) {
 
     return (
         <div>
-            Balls 
+            
             <div data-testid='ball-counts'>
-                {balls}
+            Balls : {balls}
             </div>
             <br />
-            Strikes 
+            
             <div data-testid='strike-counts'>
-                {strikes}
+            Strikes : {strikes}
             </div>
         </div>
     )

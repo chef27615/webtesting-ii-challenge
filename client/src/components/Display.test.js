@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, cleanup } from 'react-testing-library';
+import { render, cleanup, waitForElement } from 'react-testing-library';
 import 'jest-dom/extend-expect';
 
 import Display from './Display';
@@ -17,9 +17,8 @@ describe('<Display />', () => {
         cleanup();
     })
 
-    // it('should have text', ()=> {
-    //     const { getByTextById } = render(<Display />);
-    //     const text = getByTextById('ball-counts')
-    //     expect(text).toBeInTheDocument();
-    // })
+    it('should have value', ()=> {
+        const { queryAllByText } = render(<Display  />);
+        expect(queryAllByText(/balls/i)).not.toBeNull();
+    })
 })
